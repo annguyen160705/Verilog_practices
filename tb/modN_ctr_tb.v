@@ -1,0 +1,24 @@
+module modN_ctr_tb;
+  parameter N =32;
+  parameter WIDTH =5;
+
+  reg clk;
+  reg rstn;
+  wire [WIDTH-1:0] out;
+
+  modN_ctr   #(.N(N),.WIDTH(WIDTH)) u0 ( 	.clk(clk),
+                	.rstn(rstn),
+                	.out(out));
+
+  always #10 clk = ~clk;
+
+  initial begin
+    {clk, rstn} <= 0;
+
+    $monitor ("T=%0t rstn=%0b out=0x%0h", $time, rstn, out);
+    repeat(2) @ (posedge clk);
+    rstn <= 1;
+
+    repeat(20) @ (posedge clk);
+  end
+endmodule
