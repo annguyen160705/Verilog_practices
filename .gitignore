@@ -1,0 +1,9 @@
+work/
+db/
+incremental_db/
+simulation/
+*.qdb
+*.qpg
+*.qtl
+*.bak
+*.log
