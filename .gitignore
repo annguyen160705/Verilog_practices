@@ -7,3 +7,5 @@ simulation/
 *.qtl
 *.bak
 *.log
+*.wlf
+*.txt
