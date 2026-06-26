@@ -9,3 +9,6 @@ simulation/
 *.log
 *.wlf
 *.txt
+transcript
+wlf*
+vsim.wlf
